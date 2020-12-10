@@ -1,6 +1,5 @@
 # Import discord packages
 import discord
-import datetime
 from discord.ext import commands
 
 # Client Our Bot
@@ -44,12 +43,10 @@ async def pfp(context, ):
 async def kick(context, member: discord.User = None, *, reason="Reason not Specified"):
     if member == None:
         botpfp = client.user.avatar_url
-        time = datetime.datetime.utcfromtimestamp(1607549263)
 
         await context.message.delete(delay=2)
         KickEmbed = discord.Embed(title="Kick Format Format", description="*kick {Member} {Reason}", color=0x4c00ff)
         KickEmbed.set_thumbnail(url=botpfp)
-        KickEmbed.set_footer(text=time)
 
         await context.message.channel.send(embed=KickEmbed)
     else:
@@ -69,12 +66,10 @@ async def kick(context, member: discord.User = None, *, reason="Reason not Speci
 async def ban(context, member: discord.User = None, *, reason="Reason not Specified"):
     if member == None:
         botpfp = client.user.avatar_url
-        time = datetime.datetime.utcfromtimestamp(1607549263)
 
         await context.message.delete(delay=2)
         BanEmbed = discord.Embed(title="Ban Format Format", description="*ban {Member} {Reason}", color=0x4c00ff)
         BanEmbed.set_thumbnail(url=botpfp)
-        BanEmbed.set_footer(text=time)
 
         await context.message.channel.send(embed=BanEmbed)
     else:
