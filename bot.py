@@ -1,11 +1,11 @@
 # Import discord packages
-import discord
 from discord.ext import commands
 
 # Client Our Bot
 client = commands.Bot(command_prefix="*",
                       case_insensitive=True)  # case_insensitive=True makes all commands case insensitive :D
 
+client.load_extension("cogs.ErrorHandler")
 client.load_extension("cogs.UponJoinMessage")
 client.load_extension("cogs.KickCommand")
 client.load_extension("cogs.ProfilePictureCommand")
