@@ -18,6 +18,15 @@ class ErrorHandler(commands.Cog):
                 color=0x4c00ff)
             await context.message.channel.send(embed=PermsEmbed)
 
+        elif isinstance(error, commands.MemberNotFound):
+            PermsEmbed = discord.Embed(
+                title="I could not find that member, Make sure to @ the member. \nPlease try again.",
+                color=0x4c00ff)
+            await context.message.channel.send(embed=PermsEmbed)
+
+        elif isinstance(error, commands.BadArgument):
+            print("Bad argument" + error)
+
 
 def setup(bot):
     bot.add_cog(ErrorHandler(bot))

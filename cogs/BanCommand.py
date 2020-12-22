@@ -14,7 +14,7 @@ class BanCommand(commands.Cog):
             botpfp = self.bot.user.avatar_url
 
             await context.message.delete(delay=2)
-            BanEmbed = discord.Embed(title="Ban Format Format", description="*ban {Member} {Reason}", color=0x4c00ff)
+            BanEmbed = discord.Embed(title="Ban Format", description="*ban {Member} {Reason}", color=0x4c00ff)
             BanEmbed.set_thumbnail(url=botpfp)
 
             await context.message.channel.send(embed=BanEmbed)
